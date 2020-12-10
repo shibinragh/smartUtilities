@@ -38,8 +38,6 @@ Align
 | .bs-f                        | background-size:fixed;        |
 | .bs-a                        | background-size:auto;         |
 | .b-n-#{$breakpoint}          | sm, md, lg                    |
- 
-
 | Border                       |           Class Name                    |
 |------------------------------|-------------------------------|
 | .b                           |                               |
