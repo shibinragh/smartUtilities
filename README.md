@@ -3,7 +3,7 @@ Utility Classes
 
 
 
-| Rules                                                        | Example code    | Full names                                        |
+| Rules                                                        | Class Names     | CSS                                               |
 |--------------------------------------------------------------|-----------------|---------------------------------------------------|
 | Property and property values separate with hyphen            | .mb-20          | margin-bottom:20px                                |
 | First letter of all words                                    | .p-r            | position-relative                                 |
