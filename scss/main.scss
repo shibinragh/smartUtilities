@@ -1,7 +1,6 @@
  
 @import "support/index.scss";  
 @import "normalize"; 
-@import "component-border"; 
 @import "component-form"; 
 @import "component-radius"; 
 @import "component-shadow"; 
@@ -10,7 +9,8 @@
 @import "component-color";
 @import "component-dropdown";
 @import "container"; 
-@import "grid";   
+@import "grid";  
+@import "border";  
 @import "margin";    
 @import "padding";  
 @import "width"; 
@@ -21,11 +21,12 @@
 @import "position"; 
 @import "text"; 
 @import "font";
-@import "background"; 
+@import "background";   
 
 
 @each $breakpoint in map-keys($breakpoints) { 
     @include container($breakpoint, "nonResponsive");
+    @include border($breakpoint, "nonResponsive");
     @include margin($breakpoint, "nonResponsive");
     @include padding($breakpoint, "nonResponsive"); 
     @include width($breakpoint, "nonResponsive");
@@ -40,6 +41,7 @@
     @include breakpoint-up($breakpoint) {  
         @include container($breakpoint, "responsive");
         @include generate-grid(12, $breakpoint);
+        @include border($breakpoint, "responsive");
         @include margin($breakpoint, "responsive");
         @include padding($breakpoint, "responsive");
         @include width($breakpoint, "responsive"); 

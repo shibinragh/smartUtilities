@@ -1,5 +1,10 @@
 # smartUtilities
-Utility Classes 
+Minimal scss/css frame work with light weight and short name utility classes  
+### Included
+Grid
+Minimal variable code 
+Important mixins 
+Components for dropdown, buttons and forms 
 
 
 
