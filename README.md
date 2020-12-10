@@ -13,6 +13,15 @@ Utility classes
 |                                                              |                                                                                                     |
 
 
+|                    Align                       |
+|---------------------|:------------------------:|
+| .ai-c               | align-items: center;     |
+| .ai-fs              | align-items: flex-start; |
+| .ai-fe              | align-items: flex-end;   |
+| .ai-c-#{breakpoint} | sm, md, lg               |
+
+
+
 | Align                        |                               |
 |------------------------------|-------------------------------|
 | .ai-c                        | align-items: center;          |
