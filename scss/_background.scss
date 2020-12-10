@@ -1,0 +1,38 @@
+@mixin background($breakpoint, $responsive) {
+    @if $responsive == "nonResponsive" and  $breakpoint == xs  {  
+        .b-n{
+            background:none; 
+        }
+        .bs-cn{
+            background-size:contain;
+        }
+        .bs-cr{
+            background-size:cover;
+        }
+        .bs-f{
+            background-size:fixed;
+        }
+        .bs-a{
+            background-size:auto;
+        }
+    } 
+    @if $responsive == "responsive" {
+        @if $breakpoint != xs {
+            .b-n-#{$breakpoint}{
+                background:none;
+            }
+            .bs-cn-#{$breakpoint}{
+                background-size:contain;
+            }
+            .bs-cr-#{$breakpoint}{
+                background-size:cover;
+            }
+            .bs-f-#{$breakpoint}{
+                background-size:fixed;
+            }
+            .bs-a-#{$breakpoint}{
+                background-size:auto;
+            }
+        }
+    } 
+}

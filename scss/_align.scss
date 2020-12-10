@@ -1,0 +1,26 @@
+@mixin align($breakpoint, $responsive) {
+    @if $responsive == "nonResponsive" and  $breakpoint == xs  {
+        .ai-c{
+            align-items: center;
+        }
+        .ai-fs{
+            align-items: flex-start;
+        }
+        .ai-fe{
+            align-items: flex-end;
+        }
+    } 
+    @if $responsive == "responsive" {
+        @if $breakpoint != xs {
+            .ai-c-#{breakpoint}{
+                align-items: center;
+            }
+            .ai-fs-#{breakpoint}{
+                align-items: flex-start;
+            }
+            .ai-fe-#{breakpoint}{
+                align-items: flex-end;
+            }
+        }
+    } 
+}

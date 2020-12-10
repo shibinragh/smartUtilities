@@ -1,0 +1,26 @@
+@mixin text($breakpoint, $responsive) {
+    @if $responsive == "nonResponsive" and  $breakpoint == xs  {
+        .ta-l{
+            text-align: left;
+        }
+        .ta-c{
+            text-align: center;
+        }
+        .ta-r{
+            text-align: center;
+        }
+    } 
+    @if $responsive == "responsive" {
+        @if $breakpoint != xs {
+            .ta-l-#{$breakpoint}{
+                text-align: left;
+            }
+            .ta-c-#{$breakpoint}{
+                text-align: center;
+            }
+            .ta-r-#{$breakpoint}{
+                text-align: center;
+            }
+        }
+    } 
+}

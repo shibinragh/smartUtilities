@@ -1,0 +1,32 @@
+@mixin flex($breakpoint, $responsive) {
+    @if $responsive == "nonResponsive" and  $breakpoint == xs  {
+        .fw-w{
+            flex-wrap: wrap;  
+        }
+        .fw-n{
+            flex-wrap: nowrap; 
+        }
+        .fd-c{
+            flex-direction: column;
+        }
+        .fd-r{
+            flex-direction: row;
+        }
+    } 
+    @if $responsive == "responsive" { 
+        @if $breakpoint != xs {
+            .fw-w-#{$breakpoint}{
+                flex-wrap: wrap;
+            }
+            .fw-n-#{$breakpoint}{
+                flex-wrap: nowrap;
+            }
+            .fd-c-#{$breakpoint}{
+                flex-direction: column;
+            }
+            .fd-r-#{$breakpoint}{
+                flex-direction: row;
+            }
+        }
+    } 
+}

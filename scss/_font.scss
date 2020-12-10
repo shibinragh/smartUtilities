@@ -1,0 +1,63 @@
+@mixin font($breakpoint, $responsive) {
+    @if $responsive == "nonResponsive" and  $breakpoint == xs  {
+        .fw-n{
+            font-weight:normal;
+        }
+        .fw-b{
+            font-weight:bold;
+        }
+        .fw-i{
+            font-weight:inherit;
+        }
+
+        //font weight
+        $fw : 100;
+        @while $fw < 901 {  
+            .fw-#{$fw}{
+                font-weight:$fw;
+            }
+            $fw : $fw + 100; 
+        }
+
+
+        //font size
+        $value : 0;
+        @while $value < 31 {  
+            .fs-#{$value}{
+                font-size:$value+px;
+            }
+            $value : $value + 1; 
+        }
+    } 
+    @if $responsive == "responsive" {
+        @if $breakpoint != xs {
+            .fw-n-#{$breakpoint}{
+                font-weight:normal;
+            }
+            .fw-b-#{$breakpoint}{
+                font-weight:bold;
+            }
+            .fw-i-#{$breakpoint}{
+                font-weight:inherit;
+            }
+
+        //font weight
+        $fw : 100;
+        @while $fw < 901 {  
+            .fw-#{$fw}-#{$breakpoint}{
+                font-weight:$fw;
+            }
+            $fw : $fw + 100; 
+        }
+
+            //font size
+            $value : 0;
+            @while $value < 31 { 
+                .fs-#{$value}-#{$breakpoint}{
+                    font-size:$value+px;
+                }
+              $value : $value + 1; 
+            }
+        }
+    } 
+}

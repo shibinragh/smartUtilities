@@ -1,0 +1,93 @@
+// min
+//====
+@mixin breakpoint-up($breakpoint) { 
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+// max
+//====
+@mixin breakpoint-down($breakpoint) { 
+  @if map-has-key($breakpoints, $breakpoint) {
+    @if( $breakpoint == xs ){
+      @media  (max-width:  map-get($breakpoints, sm ) - 1 ) {
+        @content;
+      }
+    }
+    @if( $breakpoint == sm ){
+      @media  (max-width:  map-get($breakpoints, md ) - 1 ) {
+        @content;
+      }
+    }
+    @if( $breakpoint == md ){
+      @media  (max-width:  map-get($breakpoints, lg ) - 1 ) {
+        @content;
+      }
+    }
+    @if( $breakpoint == lg ){
+      @media  (max-width:  map-get($breakpoints, xl ) - 1 ) {
+        @content;
+      }
+    }
+     
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+  // only xs, sm, md, lg
+  //====================
+  @mixin breakpoint-only($breakpointOnly) { 
+    @if map-has-key($breakpoints, $breakpointOnly) {
+      @if( $breakpointOnly == xs ){
+        @media (min-width: #{map-get($breakpoints, $breakpointOnly)}) and (max-width:  map-get($breakpoints, sm ) - 1 ) {
+          @content;
+        }
+      }
+      @if( $breakpointOnly == sm ){
+        @media (min-width: #{map-get($breakpoints, $breakpointOnly)}) and (max-width:  map-get($breakpoints, md ) - 1 ) {
+          @content;
+        }
+      }
+      @if( $breakpointOnly == md ){
+        @media (min-width: #{map-get($breakpoints, $breakpointOnly)}) and (max-width:  map-get($breakpoints, lg ) - 1 ) {
+          @content;
+        }
+      }
+      @if( $breakpointOnly == lg ){
+        @media (min-width: #{map-get($breakpoints, $breakpointOnly)}) and (max-width:  map-get($breakpoints, xl ) - 1 ) {
+          @content;
+        }
+      }
+      @if( $breakpointOnly == xl ){
+        @media (min-width: #{map-get($breakpoints, $breakpointOnly)}) and (max-width:  map-get($breakpoints, xxl ) - 1 ) {
+          @content;
+        }
+      }
+    }
+  
+    @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Please make sure it is defined in `$breakpoints` map.";
+    }
+  }
+ 
+ 
+// example
+// ======
+ body{
+  @include breakpoint-up(lg){
+  }
+   @include breakpoint-only(lg){
+   }
+ }

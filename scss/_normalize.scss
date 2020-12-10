@@ -1,0 +1,34 @@
+*,body,div{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-size:14px;
+    color:$gray-dark;
+    font-family:$font-text; 
+    vertical-align:top;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+li{
+    list-style:none;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+img{
+    max-width:100%; 
+    display:block;
+}
+icon{
+    display: inline-block;
+}
+svg{
+    max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: $font-title;
+    font-weight:900;
+}

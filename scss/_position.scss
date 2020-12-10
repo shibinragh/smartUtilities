@@ -1,0 +1,94 @@
+@mixin position($breakpoint, $responsive) {
+    @if $responsive == "nonResponsive" and  $breakpoint == xs  {
+        .p-r{
+            position:relative;
+        }
+        .p-a{
+            position: absolute;
+        }
+        .p-f{
+            position:fixed;
+        }
+        .p-s{
+            position:static;
+        }
+        $value : 0;
+        @while $value < 10 {  
+            .t-#{$value}{
+                top:$value+px;
+            }
+            .r-#{$value}{
+                right:$value+px;
+            }   
+            .b-#{$value}{
+                bottom:$value+px;
+            } 
+            .l-#{$value}{
+                left:$value+px;
+            } 
+            $value : $value + 1; 
+        }
+        @while $value > 9 and $value < 41  { 
+            .t-#{$value}{
+                top:$value+px;
+            }
+            .r-#{$value}{
+                right:$value+px;
+            }   
+            .b-#{$value}{
+                bottom:$value+px;
+            } 
+            .l-#{$value}{
+                left:$value+px;
+            } 
+            $value : $value + 5; 
+        }
+    } 
+    @if $responsive == "responsive" {
+        @if $breakpoint != xs {
+            .pr-#{$breakpoint}{
+                position:relative;
+            }
+            .pa-#{$breakpoint}{
+                position: absolute;
+            }
+            .pf-#{$breakpoint}{
+                position:fixed;
+            }
+            .ps-#{$breakpoint}{
+                position:static;
+            }
+            $value : 0;
+            @while $value < 10 { 
+                .t-#{$value}-#{$breakpoint}{
+                    margin-top:$value+px;
+                }
+                .r-#{$value}-#{$breakpoint}{
+                    margin-right:$value+px;
+                }
+                .b-#{$value}-#{$breakpoint}{
+                    margin-bottom:$value+px;
+                }
+                .l-#{$value}-#{$breakpoint}{
+                    margin-left:$value+px;
+                }
+              $value : $value + 1; 
+            }
+            @while $value > 9 and $value < 41  { 
+                .t-#{$value}-#{$breakpoint}{
+                    margin-top:$value+px;
+                }
+                .r-#{$value}-#{$breakpoint}{
+                    margin-right:$value+px;
+                }
+                .b-#{$value}-#{$breakpoint}{
+                    margin-bottom:$value+px;
+                }
+                .l-#{$value}-#{$breakpoint}{
+                    margin-left:$value+px;
+                }
+              $value : $value + 5; 
+            }
+        }
+    } 
+}

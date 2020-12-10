@@ -1,0 +1,70 @@
+@mixin margin($breakpoint, $responsive) {
+    @if $responsive == "nonResponsive" and  $breakpoint == xs  {
+        $value : 0;
+        @while $value < 10 {  
+            .mt-#{$value}{
+                margin-top:$value+px;
+            }
+            .mr-#{$value}{
+                margin-right:$value+px;
+            }   
+            .mb-#{$value}{
+                margin-bottom:$value+px;
+            } 
+            .ml-#{$value}{
+                margin-left:$value+px;
+            } 
+            $value : $value + 1; 
+        }
+        @while $value > 9 and $value < 41  { 
+            .mt-#{$value}{
+                margin-top:$value+px;
+            }
+            .mr-#{$value}{
+                margin-right:$value+px;
+            }   
+            .mb-#{$value}{
+                margin-bottom:$value+px;
+            } 
+            .ml-#{$value}{
+                margin-left:$value+px;
+            } 
+            $value : $value + 5; 
+        }
+    } 
+    @if $responsive == "responsive" {
+        @if $breakpoint != xs {
+            $value : 0;
+            @while $value < 10 { 
+                .mt-#{$value}-#{$breakpoint}{
+                    margin-top:$value+px;
+                }
+                .mr-#{$value}-#{$breakpoint}{
+                    margin-right:$value+px;
+                }
+                .mb-#{$value}-#{$breakpoint}{
+                    margin-bottom:$value+px;
+                }
+                .ml-#{$value}-#{$breakpoint}{
+                    margin-left:$value+px;
+                }
+              $value : $value + 1; 
+            }
+            @while $value > 9 and $value < 41  { 
+                .mt-#{$value}-#{$breakpoint}{
+                    margin-top:$value+px;
+                }
+                .mr-#{$value}-#{$breakpoint}{
+                    margin-right:$value+px;
+                }
+                .mb-#{$value}-#{$breakpoint}{
+                    margin-bottom:$value+px;
+                }
+                .ml-#{$value}-#{$breakpoint}{
+                    margin-left:$value+px;
+                }
+              $value : $value + 5; 
+            }
+        }
+    } 
+}

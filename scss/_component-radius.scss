@@ -1,0 +1,12 @@
+.radius-sm{
+    @include border-radius($radius-sm);
+}
+.radius-md{
+    @include border-radius($radius-md);
+}
+.radius-lg{
+    @include border-radius($radius-lg);
+}
+.radius-round{
+    @include border-radius(50%);
+}

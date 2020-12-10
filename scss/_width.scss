@@ -1,0 +1,38 @@
+@mixin width($breakpoint, $responsive) {
+    @if $responsive == "nonResponsive" and  $breakpoint == xs  {
+        .w-a{
+            width:auto;
+        }
+        .w-100-percentage{
+            width:100%;
+        }
+        .w-100-vw{
+            width:100vw;
+        }
+        .mnw-a{
+            min-width: auto;
+        }
+        .mxw-n{
+            max-width: none;
+        }
+    } 
+    @if $responsive == "responsive" {
+        @if $breakpoint != xs {
+            .w-a-#{$breakpoint}{
+                width:auto;
+            }
+            .w-100-percentage-#{$breakpoint}{
+                width:100%;
+            }
+            .w-100-vw-#{$breakpoint}{
+                width:100vw;
+            }
+            .mnw-a-#{$breakpoint}{
+                min-width: auto;
+            }
+            .mxw-n-#{$breakpoint}{
+                max-width: none;
+            }
+        }
+    } 
+}

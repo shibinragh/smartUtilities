@@ -1,0 +1,9 @@
+.shadow-sm{
+    @include box-shadow($shadow-sm);
+}
+.shadow-md{
+    @include box-shadow($shadow-md);
+}
+.shadow-lg{
+    @include box-shadow($shadow-lg);
+}

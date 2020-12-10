@@ -1,0 +1,26 @@
+[class^="grid-"] {
+  display:inline-block;
+}
+@mixin generate-grid($columns, $size: '') {
+  @if $size != xs {
+    @for $i from 1 through $columns {
+      $width: 100% / ( $columns / $i );
+      //$width: calc(100% / ( #{$columns} / #{$i} ));
+      @if($size == '') {
+        .grid-#{$i} {
+          width: $width;
+        }
+      }
+      @else {
+        .grid-#{$size}-#{$i} {
+          width: $width;
+        }
+      }
+    }
+  }
+}
+
+ 
+
+
+

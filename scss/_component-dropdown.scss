@@ -1,0 +1,31 @@
+.dropdown{
+    position: relative;
+    z-index: $z-index-sm;
+    .dropdown-link{
+        cursor: pointer;
+    }   
+    .dropdown-menu{
+        opacity:0;
+        visibility: hidden;
+        position: absolute;
+        top:50%;
+        background:#fff;
+        min-width:120px;
+        padding:15px;
+        @extend .b;
+        @extend .radius-sm; 
+        @include transition(all 0.3s linear)
+        .dropdown-menu-item{
+            cursor: pointer;
+            padding:5px;
+            display: block;
+        }
+    }
+    &:hover{
+        .dropdown-menu{
+            opacity:1;
+            visibility: visible;
+            top:100%;
+        }
+    }
+}

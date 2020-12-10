@@ -1,0 +1,26 @@
+@mixin float($breakpoint, $responsive) {
+    @if $responsive == "nonResponsive" and  $breakpoint == xs  { 
+        .f-n{
+           float: none;
+        }
+        .f-l{
+            float: left;
+        }
+        .f-r{
+            float: right;
+        }
+    } 
+    @if $responsive == "responsive" {
+        @if $breakpoint != xs {
+            .f-n-#{$breakpoint}{
+                float: none;
+             }
+             .f-l-#{$breakpoint}{
+                 float: left;
+             }
+             .f-r-#{$breakpoint}{
+                 float: right;
+             }
+        }
+    } 
+}

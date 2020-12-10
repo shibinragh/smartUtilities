@@ -1,0 +1,70 @@
+@mixin padding($breakpoint, $responsive) {
+    @if $responsive == "nonResponsive" and  $breakpoint == xs  {
+        $value : 0;
+        @while $value < 10 {  
+            .pt-#{$value}{
+                padding-top:$value+px;
+            }
+            .pr-#{$value}{
+                padding-right:$value+px;
+            }   
+            .pb-#{$value}{
+                padding-bottom:$value+px;
+            } 
+            .pl-#{$value}{
+                padding-left:$value+px;
+            } 
+            $value : $value + 1; 
+        }
+        @while $value > 9 and $value < 41  { 
+            .pt-#{$value}{
+                padding-top:$value+px;
+            }
+            .pr-#{$value}{
+                padding-right:$value+px;
+            }   
+            .pb-#{$value}{
+                padding-bottom:$value+px;
+            } 
+            .pl-#{$value}{
+                padding-left:$value+px;
+            } 
+            $value : $value + 5; 
+        }
+    } 
+    @if $responsive == "responsive" {
+        @if $breakpoint != xs {
+            $value : 0;
+            @while $value < 10 { 
+                .pt-#{$value}-#{$breakpoint}{
+                    padding-top:$value+px;
+                }
+                .pr-#{$value}-#{$breakpoint}{
+                    padding-right:$value+px;
+                }
+                .pb-#{$value}-#{$breakpoint}{
+                    padding-bottom:$value+px;
+                }
+                .pl-#{$value}-#{$breakpoint}{
+                    padding-left:$value+px;
+                }
+              $value : $value + 1; 
+            }
+            @while $value > 9 and $value < 41  { 
+                .pt-#{$value}-#{$breakpoint}{
+                    padding-top:$value+px;
+                }
+                .pr-#{$value}-#{$breakpoint}{
+                    padding-right:$value+px;
+                }
+                .pb-#{$value}-#{$breakpoint}{
+                    padding-bottom:$value+px;
+                }
+                .pl-#{$value}-#{$breakpoint}{
+                    padding-left:$value+px;
+                }
+              $value : $value + 5; 
+            }
+        }
+    } 
+}

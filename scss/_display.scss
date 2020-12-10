@@ -1,0 +1,44 @@
+@mixin display($breakpoint, $responsive) {
+    @if $responsive == "nonResponsive" and  $breakpoint == xs  {
+        .d-n{
+            display:none;
+        }
+        .d-b{
+            display:block;
+        }
+        .d-ib{
+            display:inline-block;
+        }
+        .d-i{
+            display:inline;
+        }
+        .d-f{
+            display:flex;
+        }
+        .d-if{
+            display:inline-flex;
+        }
+    } 
+    @if $responsive == "responsive" {
+        @if $breakpoint != xs {
+            .d-n-#{$breakpoint}{
+                display:none;
+            }
+            .d-b-#{$breakpoint}{
+                display:block;
+            }
+            .d-ib-#{$breakpoint}{
+                display:inline-block;
+            }
+            .d-i-#{$breakpoint}{
+                display:inline;
+            }
+            .d-f-#{$breakpoint}{
+                display:flex;
+            }
+            .d-if-#{$breakpoint}{
+                display:inline-flex;
+            }
+        }
+    } 
+}

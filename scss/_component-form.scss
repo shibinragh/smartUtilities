@@ -1,0 +1,15 @@
+.form{}
+.form-field{
+    margin-bottom:20px;
+}
+.form-label{
+    margin-bottom:5px;
+}
+.form-input{
+    width:100%;
+    height:$height-md;
+    padding:5px 15px;
+    font-size:14px;
+    @extend .shadow-sm;
+    @extend .b;
+}

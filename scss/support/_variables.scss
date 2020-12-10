@@ -1,0 +1,65 @@
+// Fonts
+// =====
+$font-name-loto : 'Lato', sans-serif;
+$font-text : $font-name-loto;
+$font-title : $font-name-loto;
+
+
+// color
+// =====
+$color-primary : #57BA98 ;
+$color-primary-light : #65CCB8 ;
+$color-primary-dark : #3B945E ;
+$color-secondary : blue;
+
+$gray-light : rgba(10, 10, 10, 0.1);
+$gray-medium : rgba(10, 10, 10, 0.3);
+$gray-dark : rgba(10, 10, 10, 0.7);
+
+$border-color: $gray-light;
+
+// Height
+// =====
+$height-sm: 20px;
+$height-md: 40px;
+$height-lg: 50px;
+
+// Z-index
+// ======
+$z-index-sm: 1;
+$z-index-md: 2;
+$z-index-lg: 3;
+
+//border radius
+// ============
+$radius-sm: 3px;
+$radius-md: 6px;
+$radius-lg: 8px;
+
+//shadow
+// =====
+$shadow-sm:  0px 1px 4px 1px $gray-light;
+$shadow-md:  0px 1px 4px 1px $gray-light;
+$shadow-lg:  0px 1px 4px 1px $gray-light;
+
+
+// breakpoints 
+// ===========
+$breakpoints: (
+  xs: 0, 
+  sm: 576px, 
+  md: 768px,  
+  lg: 992px, 
+  xl: 1200px,
+  xxl: 1400px 
+);
+
+$containers: (
+  xs: 0, 
+  sm: 540px, 
+  md: 720px,  
+  lg: 960px,  
+  xl: 1140px,
+  xxl: 1500px  
+);
+ 

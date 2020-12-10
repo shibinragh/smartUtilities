@@ -1,0 +1,38 @@
+@mixin height($breakpoint, $responsive) {
+    @if $responsive == "nonResponsive" and  $breakpoint == xs  {
+        .ha{
+            height:auto;
+        }
+        .h-100-percentage{
+            height:100%;
+        }
+        .h-100-vh{
+            height:100vh;
+        }
+        .mnh-a{
+            min-height: auto;
+        }
+        .mxh-n{
+            max-height: none;
+        }
+    } 
+    @if $responsive == "responsive" {
+        @if $breakpoint != xs {
+            .ha-#{$breakpoint}{
+                height:auto;
+            }
+            .h-100-percentage-#{$breakpoint}{
+                height:100%;
+            }
+            .h-100-vh-#{$breakpoint}{
+                height:100vh;
+            }
+            .mnh-a-#{$breakpoint}{
+                min-height: auto;
+            }
+            .mxh-n-#{$breakpoint}{
+                max-height: none;
+            }
+        }
+    } 
+}
