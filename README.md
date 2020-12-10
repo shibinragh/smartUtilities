@@ -13,33 +13,23 @@ Utility classes
 |                                                              |                                                                                                     |
 
 
-
-
-Align                       
-| .ai-c               | align-items: center;     |
-| .ai-fs              | align-items: flex-start; |
-| .ai-fe              | align-items: flex-end;   |
-| .ai-c-#{breakpoint} | sm, md, lg               |
-
-
-
-| Align                        | Class Name                    |
+| Class Names                  | CSS                           |
 |------------------------------|-------------------------------|
+| Align                        |                               |
 | .ai-c                        | align-items: center;          |
 | .ai-fs                       | align-items: flex-start;      |
 | .ai-fe                       | align-items: flex-end;        |
 | .ai-c-#{breakpoint}          | sm, md, lg                    |
- 
-| Background                   | Class Name                    |
-|------------------------------|-------------------------------|
+|                              |                               |
+| Background                   |                               |
 | .b-n                         | background:none;              |
 | .bs-cn                       | background-size:contain;      |
 | .bs-cr                       | background-size:cover;        |
 | .bs-f                        | background-size:fixed;        |
 | .bs-a                        | background-size:auto;         |
 | .b-n-#{$breakpoint}          | sm, md, lg                    |
-| Border                       |           Class Name          |
-|------------------------------|-------------------------------|
+|                              |                               |
+| Border                       |                               |
 | .b                           |                               |
 | .bt                          |                               |
 | .br                          |                               |
@@ -105,28 +95,6 @@ Align
 | position                     |                               |
 | .p-r                         | position:relative;            |
 | .p-a                         | position: absolute;           |
-| .p-f                         | position:fixed;               |
-| .p-s                         | position:static;              |
-| .pr-#{$breakpoint}           |                               |
-|                              |                               |
-| .t-#{$value}                 | 0 to 10(1++) , 10 to 40 (5++) |
-| .r-#{$value}                 |                               |
-| .b-#{$value}                 |                               |
-| .l-#{$value}                 |                               |
-| .t-#{$value}-#{$breakpoint}  |                               |
-|                              |                               |
-| Text                         |                               |
-| .ta-l                        | text-align: left;             |
-| .ta-c                        | text-align: center;           |
-| .ta-r                        | text-align: center;           |
-| .ta-l-#{$breakpoint}{        |                               |
-|                              |                               |
-| Width                        |                               |
-| .w-a                         | width:auto;                   |
-| .w-100-percentage            | width:100%;                   |
-| .w-100-vw                    | width:100vw;                  |
-| .mnw-a                       | min-width: auto;              |
-| mxw-n                        | max-width: none;              |
 | .p-f                         | position:fixed;               |
 | .p-s                         | position:static;              |
 | .pr-#{$breakpoint}           |                               |
