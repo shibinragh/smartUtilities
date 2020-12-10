@@ -1,10 +1,10 @@
 # smartUtilities
 Minimal scss/css frame work with light weight and short name utility classes  
 ### Included
-Grid
-Minimal variable code 
-Important mixins 
-Components for dropdown, buttons and forms 
+Grid with bootstrap breakpoints 
+Minimal variables in variable file  
+Mixins file
+Components for dropdown, buttons, colors and forms 
 
 
 
@@ -39,7 +39,7 @@ Components for dropdown, buttons and forms
 | .br                          |                               |
 | .bl                          |                               |
 | .bb                          |                               |
-| No Responsive here now       |                               |
+| .b-#{$breakpoint}            |                               |
 |                              |                               |
 | Display                      |                               |
 | .d-n                         | display:none;                 |
