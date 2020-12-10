@@ -23,22 +23,25 @@ Align
 
 
 
-| Align                        |                               |
+| Align                        | Class Name                              |
 |------------------------------|-------------------------------|
 | .ai-c                        | align-items: center;          |
 | .ai-fs                       | align-items: flex-start;      |
 | .ai-fe                       | align-items: flex-end;        |
 | .ai-c-#{breakpoint}          | sm, md, lg                    |
-|                              |                               |
-| Background                   |                               |
+ 
+| Background                   | Class Name                              |
+|------------------------------|-------------------------------|
 | .b-n                         | background:none;              |
 | .bs-cn                       | background-size:contain;      |
 | .bs-cr                       | background-size:cover;        |
 | .bs-f                        | background-size:fixed;        |
 | .bs-a                        | background-size:auto;         |
 | .b-n-#{$breakpoint}          | sm, md, lg                    |
-|                              |                               |
-| Border                       |                               |
+ 
+
+| Border                       |           Class Name                    |
+|------------------------------|-------------------------------|
 | .b                           |                               |
 | .bt                          |                               |
 | .br                          |                               |
