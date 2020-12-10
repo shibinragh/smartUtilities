@@ -13,7 +13,9 @@ Utility classes
 |                                                              |                                                                                                     |
 
 
-|                    Align                       |
+
+
+|     <td colspan=3> Align                       |
 |---------------------|:------------------------:|
 | .ai-c               | align-items: center;     |
 | .ai-fs              | align-items: flex-start; |
