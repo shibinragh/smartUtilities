@@ -1,16 +1,15 @@
 # smartUtilities
-Utility classes 
+Utility Classes 
 
 
 
-| Rules                                                        |                               | Example code    | Full names                                        |
-|--------------------------------------------------------------|-------------------------------|-----------------|---------------------------------------------------|
-| Property and property values separate with hyphen            |                               | .mb-20          | margin-bottom:20px                                |
-| First letter of all words                                    |                               | .p-r            | position-relative                                 |
-| If multiple same words in values                             |                               | .ai-fs , .ai-fe | align-items: flex-start; , align-items: flex-end; |
-| Responsive case separated with hyphens                       |                               | .ai-c-sm        | align-items: center;                              |
-| Two letters after hyphen - to avoid same value name conflict |                               | .bs-cn, .bs-cr  | background-size:contain; , background-size:cover; |
-|                                                              |                                                                                                     |
+| Rules                                                        | Example code    | Full names                                        |
+|--------------------------------------------------------------|-----------------|---------------------------------------------------|
+| Property and property values separate with hyphen            | .mb-20          | margin-bottom:20px                                |
+| First letter of all words                                    | .p-r            | position-relative                                 |
+| If multiple same words in values                             | .ai-fs , .ai-fe | align-items: flex-start; , align-items: flex-end; |
+| Responsive case separated with hyphens                       | .ai-c-sm        | align-items: center;                              |
+| Two letters after hyphen - to avoid same value name conflict | .bs-cn, .bs-cr  | background-size:contain; , background-size:cover; |
 
 
 | Class Names                  | CSS                           |
