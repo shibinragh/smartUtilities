@@ -1,0 +1,39 @@
+
+@mixin border($breakpoint, $responsive) {
+    @if $responsive == "nonResponsive" and  $breakpoint == xs  {
+        .b{
+            border:1px solid $border-color;
+        }
+        .bt{
+            border-top:1px solid $border-color; 
+        }
+        .br{
+            border-right:1px solid $border-color;
+        }
+        .bb{
+            border-bottom:1px solid $border-color;
+        }
+        .bl{
+            border-left:1px solid $border-color;
+        }
+    } 
+    @if $responsive == "responsive" {
+        @if $breakpoint != xs {
+            .b-#{$breakpoint}{
+                border:1px solid $border-color;
+            }
+            .bt-#{$breakpoint}{
+                border-top:1px solid $border-color; 
+            }
+            .br-#{$breakpoint}{
+                border-right:1px solid $border-color;
+            }
+            .bb-#{$breakpoint}{
+                border-bottom:1px solid $border-color;
+            }
+            .bl-#{$breakpoint}{
+                border-left:1px solid $border-color;
+            }
+        }
+    } 
+}
